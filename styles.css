@@ -1,0 +1,373 @@
+/* Font faces */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: 'Open Sauce';
+    src: url('open-sauce/OpenSauceOne.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base font for all normal text */
+body {
+    font-family: 'Space Grotesk', sans-serif;  /* Hoofdlettertype met fallback */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Heading styles - alle koppen en titels */
+.nav-link,
+.hero-content h1,
+.about h2,
+.coming-soon h2,
+.contact h2,
+.contact h3,
+.team-member h4 {
+    font-family: 'Questrial', sans-serif;  /* Hoofdlettertype met fallback */
+}
+
+/* Specifieke tekststijlen die het Space Grotesk font gebruiken */
+.hero-content p,
+.about-content p,
+.contact-text,
+.team-member p,
+footer p {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    opacity: 1;  /* Make sure it's visible */
+    display: block;  /* Ensure it's displayed */
+    padding: 0.5rem 1rem;  /* Add some padding */
+}
+
+.nav-link:hover {
+    color: #006dff;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #004aad;
+    opacity: 0.21;
+    z-index: -1;
+}
+
+.hero-content {
+    color: white;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.medi {
+    color: #004aad;
+}
+
+.gence {
+    color: #006dff;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Headings */
+.about h2,
+.coming-soon h2,
+.contact h2,
+.contact h3 {
+    letter-spacing: -0.01em;
+}
+
+/* About Section */
+.about {
+    min-height: 100vh;
+    padding: 8rem 2rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about h2 {
+    color: #004aad;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.about-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.about-images img:hover {
+    transform: scale(1.05);
+}
+
+.about-content p {
+    color: #868686;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Coming Soon Section */
+.coming-soon {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('handenaanlaptop.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.coming-soon h2 {
+    color: white;
+    font-size: 3.5rem;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Contact Section */
+.contact {
+    min-height: 100vh;
+    padding: 8rem 2rem;
+    background: white;
+}
+
+.contact h2 {
+    color: #004aad;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact h3 {
+    color: #004aad;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-text {
+    text-align: center;
+    color: #868686;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member:first-child img {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    object-position: center 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* @Beau kan je de originele png van jezelf invoegen in het html script? Ik heb je foto van Linkedin opgeslagen */
+.team-member:last-child img {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    object-position: 50% top;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h4 {
+    letter-spacing: -0.01em;
+    background: linear-gradient(to right, #004aad, #006dff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    color: #868686;
+    margin: 0.2rem 0;
+}
+
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #004aad;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #006dff;
+}
+
+.linkedin-link img {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+    border-radius: 0 !important;
+    margin: 0;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.linkedin-link:hover img {
+    transform: scale(1.1);
+}
+
+.email-link {
+    color: #004aad;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #006dff;
+}
+
+/* Footer */
+footer {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    color: #868686;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .team {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation classes */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+} 
