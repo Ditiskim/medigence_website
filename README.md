@@ -4,7 +4,7 @@ Official website for MEDIGENCE - Optimizing patient safety and clinician workflo
 
 ## About
 
-MEDIGENCE supports healthcare professionals in clinical decision-making, with a special focus on prescribing. We redefine the prescribing process through smarter medication insights.
+MEDIGENCE supports healthcare professionals in clinical decision-making. 
 
 ## Features
 
